@@ -1,0 +1,34 @@
+# ============================================================
+# Bitget Paper Trading - Configuration par défaut
+# ============================================================
+
+trading:
+  initial_capital: 10000.0
+  symbols:
+    - "BTC/USDT:USDT"
+    - "ETH/USDT:USDT"
+  strategy: "rsi"
+  position_size_pct: 0.30     # 30% du capital par trade
+  max_open_positions: 3
+  slippage: 0.0005             # 0.05% slippage simulé
+
+exchange:
+  default: "bitget"
+  fee_rate: 0.001              # 0.1% par défaut si non récupéré via API
+  timeframe: "1d"
+  ohlcv_limit: 200
+
+strategies:
+  rsi:
+    period: 14
+    oversold: 30
+    overbought: 70
+    volume_threshold: 0.4
+  moving_average:
+    fast_period: 20
+    slow_period: 50
+
+performance:
+  save_reports: true
+  reports_dir: "performance_reports"
+  plot_equity_curve: true

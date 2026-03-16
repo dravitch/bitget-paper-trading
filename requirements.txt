@@ -1,0 +1,36 @@
+# ============================================================
+# Bitget Paper Trading - Requirements
+# Python 3.12+
+# ============================================================
+
+# Core data
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+
+# Exchange connectivity
+ccxt>=4.3.0
+
+# Technical analysis (nécessite la lib C ta-lib: brew install ta-lib / apt install ta-lib)
+ta-lib>=0.4.28
+
+# HTTP / WebSocket
+requests>=2.31.0
+aiohttp>=3.9.0
+websockets>=12.0
+
+# Configuration
+pyyaml>=6.0
+python-dotenv>=1.0.0
+
+# Output / CLI
+colorama>=0.4.6
+loguru>=0.7.0
+rich>=13.0.0
+
+# Visualization
+matplotlib>=3.7.0
+
+# Testing
+pytest>=8.0.0
+pytest-asyncio>=0.23.0

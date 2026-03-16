@@ -1,18 +1,18 @@
 # ============================================================
 # Bitget Paper Trading - Requirements
-# Python 3.12+
+# Python 3.11  (numpy 2.x nécessite x86_v2 — incompatible vieux CPU)
 # ============================================================
 
 # Core data
-numpy>=1.24.0
-pandas>=2.0.0
-scipy>=1.10.0
+numpy>=1.24.0,<2.0        # 2.x requiert x86_v2 (SSE4.2/POPCNT) — non dispo vieux CPU
+pandas>=2.0.0,<3.0
+scipy>=1.10.0,<2.0
 
 # Exchange connectivity
 ccxt>=4.3.0
 
-# Technical analysis (nécessite la lib C ta-lib: brew install ta-lib / apt install ta-lib)
-ta-lib>=0.4.28
+# Technical analysis
+# ta-lib>=0.4.28          # requiert la lib C ta-lib (désactivé par défaut)
 
 # HTTP / WebSocket
 requests>=2.31.0
